@@ -24,4 +24,83 @@
     <div class="estimate-intro"><p class="section-label">Plan with confidence</p><h2>What could your<br><em>project look like?</em></h2><p>Get a ballpark estimate in under a minute. Every home is different, but this is a helpful place to start.</p></div>
     <div class="estimator-card"><div class="step-label">Your project <span>01 / 03</span></div><label for="project-type">What can we help with?</label><select id="project-type" [(ngModel)]="projectType" (ngModelChange)="updateEstimate()"><option>Interior painting</option><option>Exterior painting</option><option>Stucco repair</option><option>Drywall &amp; repair</option><option>Deep cleaning</option></select><label for="project-size">Approximate size</label><select id="project-size" [(ngModel)]="projectSize" (ngModelChange)="updateEstimate()"><option>Under 1,000 sq ft</option><option>1,000 – 1,500 sq ft</option><option>1,500 – 2,500 sq ft</option><option>Over 2,500 sq ft</option></select><label for="finish-level">What's your vision?</label><select id="finish-level" [(ngModel)]="finishLevel" (ngModelChange)="updateEstimate()"><option>Refresh</option><option>Full transformation</option><option>Premium detail</option></select><div class="estimate-total"><span>Estimated range</span><strong>${{ budget.toLocaleString() }}<small> – ${{ (budget * 1.22).toLocaleString() }}</small></strong></div></div>
   </section>
+
+  <section class="testimonial-banner section-pad" aria-label="Customer testimonials">
+    <div class="testimonial-banner-head">
+      <p class="section-label">Client testimonials</p>
+      <h2>Loved across the GTA.</h2>
+    </div>
+    <div class="testimonial-rotator">
+      <article class="testimonial-slide" style="animation-delay:0s;">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" alt="Richmond Hill homeowner" loading="lazy">
+        <div>
+          <blockquote>“Our renovation was seamless and stress-free. Every detail was handled with care from start to finish.”</blockquote>
+          <p class="testimonial-meta"><strong>Amelia R.</strong> · 245 Maple Grove Ave, Richmond Hill, ON</p>
+        </div>
+      </article>
+      <article class="testimonial-slide" style="animation-delay:4s;">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="North York homeowner" loading="lazy">
+        <div>
+          <blockquote>“Professional, clean, and on time. The final result exceeded what we hoped for in our North York home.”</blockquote>
+          <p class="testimonial-meta"><strong>Daniel C.</strong> · 318 Willowdale Ave, North York, ON</p>
+        </div>
+      </article>
+      <article class="testimonial-slide" style="animation-delay:8s;">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Vaughan homeowner" loading="lazy">
+        <div>
+          <blockquote>“Excellent communication and craftsmanship. We’ve already recommended Baron to family in Vaughan.”</blockquote>
+          <p class="testimonial-meta"><strong>Priya S.</strong> · 522 Pleasant Ridge Ave, Vaughan, ON</p>
+        </div>
+      </article>
+      <article class="testimonial-slide" style="animation-delay:12s;">
+        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=300&q=80" alt="Richmond Hill homeowner" loading="lazy">
+        <div>
+          <blockquote>“The crew respected our schedule and delivered quality work exactly when promised.”</blockquote>
+          <p class="testimonial-meta"><strong>Michael T.</strong> · 167 Bayview Hill Rd, Richmond Hill, ON</p>
+        </div>
+      </article>
+      <article class="testimonial-slide" style="animation-delay:16s;">
+        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&q=80" alt="North York homeowner" loading="lazy">
+        <div>
+          <blockquote>“Clean site, clear updates, and beautiful finishes. Our kitchen feels brand new.”</blockquote>
+          <p class="testimonial-meta"><strong>Lena M.</strong> · 274 Finch Ave E, North York, ON</p>
+        </div>
+      </article>
+      <article class="testimonial-slide" style="animation-delay:20s;">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Vaughan homeowner" loading="lazy">
+        <div>
+          <blockquote>“Great communication and detail from estimate to completion. We felt in good hands.”</blockquote>
+          <p class="testimonial-meta"><strong>Arjun P.</strong> · 641 Westhampton Dr, Vaughan, ON</p>
+        </div>
+      </article>
+      <article class="testimonial-slide" style="animation-delay:24s;">
+        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=300&q=80" alt="Richmond Hill homeowner" loading="lazy">
+        <div>
+          <blockquote>“They listened to our ideas and transformed them into a warm, practical space.”</blockquote>
+          <p class="testimonial-meta"><strong>Sarah K.</strong> · 389 Elgin Mills Rd E, Richmond Hill, ON</p>
+        </div>
+      </article>
+      <article class="testimonial-slide" style="animation-delay:28s;">
+        <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=300&q=80" alt="North York homeowner" loading="lazy">
+        <div>
+          <blockquote>“Baron kept everything on track and made the whole process genuinely easy.”</blockquote>
+          <p class="testimonial-meta"><strong>Jason W.</strong> · 733 Senlac Rd, North York, ON</p>
+        </div>
+      </article>
+      <article class="testimonial-slide" style="animation-delay:32s;">
+        <img src="https://images.unsplash.com/photo-1546961329-78bef0414d7c?auto=format&fit=crop&w=300&q=80" alt="Vaughan homeowner" loading="lazy">
+        <div>
+          <blockquote>“Our exterior looks fantastic now. Neighbors keep asking who did the work.”</blockquote>
+          <p class="testimonial-meta"><strong>Nadia L.</strong> · 458 Thornhill Woods Dr, Vaughan, ON</p>
+        </div>
+      </article>
+      <article class="testimonial-slide" style="animation-delay:36s;">
+        <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=300&q=80" alt="North York homeowner" loading="lazy">
+        <div>
+          <blockquote>“The quote was accurate and the final quality was outstanding. Highly recommended.”</blockquote>
+          <p class="testimonial-meta"><strong>Kevin A.</strong> · 296 Brookview Dr, North York, ON</p>
+        </div>
+      </article>
+    </div>
+  </section>
 </main>

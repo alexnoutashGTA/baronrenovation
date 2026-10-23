@@ -15,6 +15,8 @@ export class AppComponent {
 
   goToEstimate(): void {
     this.menuOpen = false;
-    this.router.navigate(['/']).then(() => setTimeout(() => document.getElementById('estimate')?.scrollIntoView({ behavior: 'smooth' })));
+    this.router.navigate(['/']).then(() => {
+      setTimeout(() => document.getElementById('estimate')?.scrollIntoView({ behavior: 'smooth' }));
+    });
   }
 }
