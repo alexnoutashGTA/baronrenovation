@@ -22,7 +22,13 @@ button { border: 0; cursor: pointer; }
 .nav-cta { background: transparent; font-weight: 600; font-size: 13px; border-bottom: 1px solid var(--ink); padding: 8px 0; }
 .nav-cta span, .button span, .text-link span { margin-left: 11px; font-size: 17px; }
 .menu-toggle, .mobile-nav { display: none; }
-.promo-mini { padding-top: 22px; display: flex; justify-content: flex-end; }
+.promo-mini { padding-top: 22px; display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+.promo-award { width: 150px; height: 150px; border-radius: 50%; border: 2px solid #ef765e88; background: radial-gradient(circle at 30% 30%, #fffdfb, #ffe9df 62%, #ffd7c8); display: grid; place-content: center; text-align: center; padding: 12px; box-shadow: 0 10px 26px rgba(239,118,94,.2); position: relative; overflow: hidden; }
+.promo-award::before { content: ''; position: absolute; inset: 8px; border-radius: 50%; border: 1px dashed #ef765e88; }
+.promo-award::after { content: '?'; position: absolute; top: 8px; right: 18px; color: #ef765e; font-size: 14px; }
+.promo-award .award-year { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: #9f3f2c; margin-bottom: 5px; font-weight: 700; }
+.promo-award strong { font: 600 12px/1.22 'Playfair Display', serif; color: #7f3021; letter-spacing: .03em; font-style: italic; }
+.promo-award small { font-size: 10px; color: #7f3021; letter-spacing: .14em; text-transform: uppercase; margin-top: 6px; display: block; }
 .promo-mini-box { width: min(100%, 420px); background: linear-gradient(135deg, #fff8f5, #fff1eb 55%, #ffe9df); border: 1px solid #ef765e66; padding: 16px 18px; text-align: left; border-radius: 14px; box-shadow: 0 10px 24px rgba(239, 118, 94, .14); position: relative; overflow: hidden; }
 .promo-mini-box::after { content: ''; position: absolute; width: 120px; height: 120px; border-radius: 50%; background: #ef765e1c; right: -30px; top: -30px; }
 .promo-mini-tag { display: inline-block; margin-bottom: 8px; padding: 5px 10px; border-radius: 999px; background: #ef765e; color: #fff; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
@@ -30,6 +36,11 @@ button { border: 0; cursor: pointer; }
 .promo-mini-box span { position: relative; z-index: 1; display: block; font-size: 13px; color: #5d5b56; line-height: 1.5; margin-bottom: 12px; }
 .promo-mini-cta { position: relative; z-index: 1; background: var(--ink); color: #fff; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; padding: 9px 14px; border-radius: 999px; }
 .promo-mini-cta:hover { background: #444; }
+
+@media (max-width: 760px) {
+  .promo-mini { justify-content: center; flex-direction: column; gap: 12px; }
+  .promo-mini-box { text-align: center; }
+}
 .hero { min-height: 670px; display: grid; grid-template-columns: 46% 54%; align-items: center; padding-top: 75px; padding-bottom: 75px; position: relative; }
 .hero-copy { position: relative; z-index: 1; }
 .eyebrow, .section-label { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #76746e; font-weight: 600; }
