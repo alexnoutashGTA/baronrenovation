@@ -1,0 +1,27 @@
+<main id="top">
+  <section class="hero section-pad">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="eyebrow-line"></span> Bay Area renovation studio</div>
+      <h1>Make space for<br><em>what matters.</em></h1>
+      <p class="hero-intro">Thoughtful renovations, honest craftsmanship, and a better way to bring your vision home.</p>
+      <div class="hero-actions">
+        <button class="button button-dark" (click)="scrollTo('estimate')">Start your project</button>
+      </div>
+      <div class="hero-proof">
+        <div class="avatars"><span>J</span><span>M</span><span>A</span><span>+</span></div>
+        <div><strong>4.9 / 5</strong><small>from 120+ happy homeowners</small></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-image-wrap"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85" alt="Bright, modern living room with a warm neutral palette"></div>
+      <div class="hero-note"><span>01</span><p>We believe the best spaces feel like you.</p></div>
+      <div class="sun-shape"></div>
+    </div>
+    <div class="hero-scroll"><span>Scroll to discover</span><span class="scroll-line"></span></div>
+  </section>
+
+  <section class="estimate section-pad" id="estimate">
+    <div class="estimate-intro"><p class="section-label">Plan with confidence</p><h2>What could your<br><em>project look like?</em></h2><p>Get a ballpark estimate in under a minute. Every home is different, but this is a helpful place to start.</p></div>
+    <div class="estimator-card"><div class="step-label">Your project <span>01 / 03</span></div><label for="project-type">What can we help with?</label><select id="project-type" [(ngModel)]="projectType" (ngModelChange)="updateEstimate()"><option>Interior painting</option><option>Exterior painting</option><option>Stucco repair</option><option>Drywall &amp; repair</option><option>Deep cleaning</option></select><label for="project-size">Approximate size</label><select id="project-size" [(ngModel)]="projectSize" (ngModelChange)="updateEstimate()"><option>Under 1,000 sq ft</option><option>1,000 – 1,500 sq ft</option><option>1,500 – 2,500 sq ft</option><option>Over 2,500 sq ft</option></select><label for="finish-level">What's your vision?</label><select id="finish-level" [(ngModel)]="finishLevel" (ngModelChange)="updateEstimate()"><option>Refresh</option><option>Full transformation</option><option>Premium detail</option></select><div class="estimate-total"><span>Estimated range</span><strong>${{ budget.toLocaleString() }}<small> – ${{ (budget * 1.22).toLocaleString() }}</small></strong></div></div>
+  </section>
+</main>
