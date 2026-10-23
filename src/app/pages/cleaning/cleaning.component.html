@@ -1,0 +1,41 @@
+<main class="services section-pad" id="cleaning">
+  <div class="section-heading">
+    <div>
+      <p class="section-label">Cleaning services</p>
+      <h2>Cleaning that feels <em>complete.</em></h2>
+    </div>
+    <p class="heading-note">Choose the service level you need and get an instant estimate based on your home layout.</p>
+  </div>
+
+  <div class="service-grid cleaning-grid">
+    <article class="service-card coral" *ngFor="let option of options; index as i">
+      <div class="service-top">
+        <span class="service-number">0{{ i + 1 }}</span>
+        <span class="service-icon">✦</span>
+      </div>
+      <h3>{{ option.title }}</h3>
+      <p>{{ option.detail }}</p>
+    </article>
+  </div>
+
+  <section class="estimator-card cleaning-estimator" aria-label="Cleaning estimator">
+    <div class="step-label">Cleaning estimate <span>Instant</span></div>
+
+    <label for="rooms">Rooms</label>
+    <input id="rooms" type="number" min="0" [ngModel]="rooms" (ngModelChange)="updateValue('rooms', $event)">
+
+    <label for="bathrooms">Bathrooms</label>
+    <input id="bathrooms" type="number" min="0" [ngModel]="bathrooms" (ngModelChange)="updateValue('bathrooms', $event)">
+
+    <label for="kitchens">Kitchens</label>
+    <input id="kitchens" type="number" min="0" [ngModel]="kitchens" (ngModelChange)="updateValue('kitchens', $event)">
+
+    <label for="floors">Floors</label>
+    <input id="floors" type="number" min="0" [ngModel]="floors" (ngModelChange)="updateValue('floors', $event)">
+
+    <div class="estimate-total">
+      <span>Estimated cleaning total</span>
+      <strong>${{ estimate.toLocaleString() }}</strong>
+    </div>
+  </section>
+</main>

@@ -74,6 +74,15 @@ h1 em, h2 em { color: var(--coral); font-style: italic; }
 .intro-strip { background: var(--ink); color: var(--cream); padding-top: 105px; padding-bottom: 105px; }
 .intro-grid { display: grid; grid-template-columns: 33% 1fr; }.intro-strip .section-label { color: #aaa79f; }.intro-statement { max-width: 700px; display: grid; grid-template-columns: 1fr 290px; column-gap: 70px; }.intro-statement h2 { font-size: clamp(42px, 5vw, 67px); margin: 0; }.intro-statement h2 em { color: var(--coral); }.intro-statement p { color: #aaa79f; line-height: 1.65; font-size: 14px; margin: 9px 0 23px; }.intro-statement .text-link { color: var(--cream); border-color: var(--cream); grid-column: 2; width: max-content; }
 .services, .work { padding-top: 125px; padding-bottom: 130px; }.section-heading { display: flex; justify-content: space-between; align-items: end; margin-bottom: 55px; }.section-heading h2 { font-size: clamp(45px, 5.5vw, 70px); margin: 18px 0 0; }.heading-note { color: #77746d; font-size: 14px; line-height: 1.65; max-width: 260px; margin-bottom: 5px; }.service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }.service-card { min-height: 295px; padding: 25px 24px; display: flex; flex-direction: column; transition: transform .2s; }.service-card:hover { transform: translateY(-6px); }.service-card.coral { background: #f1c0b4; }.service-card.sage { background: var(--sage); }.service-card.gold { background: var(--gold); }.service-card.blue { background: var(--blue); }.service-top { display: flex; justify-content: space-between; }.service-number { font-size: 11px; font-weight: 600; }.service-icon { font-size: 28px; font-weight: 300; }.service-card h3 { font: 500 27px 'Playfair Display', serif; margin: auto 0 13px; }.service-card p { color: #625f58; font-size: 12px; line-height: 1.55; max-width: 210px; margin-bottom: 18px; }.service-card a { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }.service-card a span { margin-left: 9px; font-size: 16px; }
+.cleaning-grid { grid-template-columns: repeat(3, 1fr); margin-bottom: 34px; }
+.cleaning-estimator { max-width: 520px; }
+@media (max-width: 800px) {
+  .cleaning-grid { grid-template-columns: 1fr 1fr; }
+  .cleaning-estimator { max-width: 100%; }
+}
+@media (max-width: 480px) {
+  .cleaning-grid { grid-template-columns: 1fr; }
+}
 
 .testimonial-banner { padding-top: 90px; padding-bottom: 110px; text-align: center; }
 .testimonial-banner-head h2 { font: 500 clamp(30px, 4.2vw, 46px)/1.05 'Playfair Display', serif; margin: 14px 0 26px; letter-spacing: -.03em; }

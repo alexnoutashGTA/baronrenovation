@@ -9,6 +9,7 @@
       <a routerLink="/work" routerLinkActive="active">Our work</a>
       <a routerLink="/story" routerLinkActive="active">Our story</a>
       <a routerLink="/contact" routerLinkActive="active">Contact</a>
+      <a routerLink="/cleaning" routerLinkActive="active">Cleaning</a>
     </nav>
     <button class="nav-cta" (click)="goToEstimate()">Get a free estimate</button>
     <button class="menu-toggle" (click)="menuOpen = !menuOpen" [attr.aria-expanded]="menuOpen" aria-label="Toggle navigation">{{ menuOpen ? '×' : '☰' }}</button>
@@ -20,6 +21,7 @@
       <a routerLink="/work" (click)="menuOpen = false">Our work</a>
       <a routerLink="/story" (click)="menuOpen = false">Our story</a>
       <a routerLink="/contact" (click)="menuOpen = false">Contact</a>
+      <a routerLink="/cleaning" (click)="menuOpen = false">Cleaning</a>
       <button (click)="goToEstimate()">Get a free estimate</button>
     </nav>
   }
