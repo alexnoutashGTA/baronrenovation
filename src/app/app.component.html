@@ -5,11 +5,11 @@
       <span class="brand-name">Baron <b>Restoration</b></span>
     </a>
     <nav class="desktop-nav" aria-label="Main navigation">
-      <a routerLink="/services" routerLinkActive="active">Services</a>
-      <a routerLink="/work" routerLinkActive="active">Our work</a>
-      <a routerLink="/story" routerLinkActive="active">Our story</a>
-      <a routerLink="/contact" routerLinkActive="active">Contact</a>
-      <a routerLink="/cleaning" routerLinkActive="active">Cleaning</a>
+      <a class="nav-tab nav-services" routerLink="/services" routerLinkActive="active">Services</a>
+      <a class="nav-tab nav-work" routerLink="/work" routerLinkActive="active">Our work</a>
+      <a class="nav-tab nav-story" routerLink="/story" routerLinkActive="active">Our story</a>
+      <a class="nav-tab nav-contact" routerLink="/contact" routerLinkActive="active">Contact</a>
+      <a class="nav-tab nav-cleaning" routerLink="/cleaning" routerLinkActive="active">Cleaning</a>
     </nav>
     <button class="nav-cta" (click)="goToEstimate()">Get a free estimate</button>
     <button class="menu-toggle" (click)="menuOpen = !menuOpen" [attr.aria-expanded]="menuOpen" aria-label="Toggle navigation">{{ menuOpen ? '×' : '☰' }}</button>
@@ -17,11 +17,11 @@
 
   @if (menuOpen) {
     <nav class="mobile-nav" aria-label="Mobile navigation">
-      <a routerLink="/services" (click)="menuOpen = false">Services</a>
-      <a routerLink="/work" (click)="menuOpen = false">Our work</a>
-      <a routerLink="/story" (click)="menuOpen = false">Our story</a>
-      <a routerLink="/contact" (click)="menuOpen = false">Contact</a>
-      <a routerLink="/cleaning" (click)="menuOpen = false">Cleaning</a>
+      <a class="nav-tab nav-services" routerLink="/services" (click)="menuOpen = false">Services</a>
+      <a class="nav-tab nav-work" routerLink="/work" (click)="menuOpen = false">Our work</a>
+      <a class="nav-tab nav-story" routerLink="/story" (click)="menuOpen = false">Our story</a>
+      <a class="nav-tab nav-contact" routerLink="/contact" (click)="menuOpen = false">Contact</a>
+      <a class="nav-tab nav-cleaning" routerLink="/cleaning" (click)="menuOpen = false">Cleaning</a>
       <button (click)="goToEstimate()">Get a free estimate</button>
     </nav>
   }

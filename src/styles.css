@@ -19,6 +19,13 @@ button { border: 0; cursor: pointer; }
 .desktop-nav { display: flex; gap: clamp(20px, 3vw, 46px); margin-left: auto; margin-right: 4vw; }
 .desktop-nav a, .footer-links a { color: #66645e; font-size: 13px; transition: color .2s; }
 .desktop-nav a:hover, .footer-links a:hover { color: var(--coral); }
+.nav-tab { padding: 6px 10px; border-radius: 8px; transition: transform .2s, box-shadow .2s, color .2s; }
+.nav-tab:hover { transform: translateY(-1px); }
+.nav-services { box-shadow: 0 5px 14px rgba(239, 118, 94, .16); }
+.nav-work { box-shadow: 0 5px 14px rgba(123, 142, 140, .18); }
+.nav-story { box-shadow: 0 5px 14px rgba(234, 216, 173, .22); }
+.nav-contact { box-shadow: 0 5px 14px rgba(38, 38, 38, .14); }
+.nav-cleaning { box-shadow: 0 5px 14px rgba(219, 39, 119, .18); }
 .nav-cta { background: transparent; font-weight: 600; font-size: 13px; border-bottom: 1px solid var(--ink); padding: 8px 0; }
 .nav-cta span, .button span, .text-link span { margin-left: 11px; font-size: 17px; }
 .menu-toggle, .mobile-nav { display: none; }
